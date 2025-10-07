@@ -23,7 +23,7 @@ echo "Seeding DuckDB database at ${DB_FILE}"
 docker run --rm \
   -v "${DUCKDB_DIR}:/data" \
   duckdb/duckdb:latest \
-  /data/sample.duckdb \
+  duckdb /data/sample.duckdb \
   -c ".read '/data/seed.sql'" \
   >/dev/null
 
